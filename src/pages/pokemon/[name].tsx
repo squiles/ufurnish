@@ -17,13 +17,13 @@ export default function Page({ data, error }: PageProps) {
     );
   }
   return (
-    <div className="flex gap-10 sm:gap-20 px-3 py-6 sm:flex-row flex-col">
+    <div className="flex gap-10 sm:gap-20 px-3 py-6 md:flex-row flex-col">
       <div className="flex flex-col gap-2">
         <Image src={data.sprites.front_default} alt={data.name} width={128} height={128} />
         <h1 className="text-2xl font-bold capitalize">{data.name}</h1>
         <p className="text-sm text-gray-500">Base Experience: {data.base_experience}</p>
       </div>
-      <div className="flex gap-10 sm:flex-row flex-col sm:gap-20">
+      <div className="flex gap-10 md:flex-row flex-col md:gap-20">
         <Abilities abilities={data.abilities} />
         <Moves moves={data.moves} />
       </div>
